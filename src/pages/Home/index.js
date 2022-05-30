@@ -11,6 +11,11 @@ export default function Home() {
 
       <InputGroup title="<Input />" />
 
+      <InputGroup
+        title="<Input error />"
+        error
+      />
+
     </Container>
   );
 }

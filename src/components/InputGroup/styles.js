@@ -1,44 +1,68 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 42px;
 
-  .input-infos{
+  p{
+    font-size: 12px;
+    margin-bottom: 16px;
+    color:${({ theme }) => theme.colors.gray[1]};
+  }
+`;
+
+export const StyledInput = styled.div`
     display: flex;
     flex-direction: column-reverse;
 
-      label {
-        transition: all 0.3s ease;
-        display: inline-block;
-        margin-bottom: 4px;
+    label {
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin-bottom: 4px;
     }
 
-  input:hover{
-    border-color: ${({ theme }) => theme.colors.gray[1]};
-  }
+    input:hover{
+      border-color: ${({ theme }) => theme.colors.gray[1]};
+    }
 
-  input{
-    transition: all 0.3s ease;
-    border: 1px solid ${({ theme }) => theme.colors.gray[3]};
-    display: block;
-    padding: 8px 14px;
-    width: 100%;
+    input{
+      transition: all 0.3s ease;
+      border: 1px solid ${({ theme }) => theme.colors.gray[3]};
+      display: block;
+      padding: 8px 14px;
+      width: 100%;
 
-  &:focus {
+      &:focus {
       outline: none;
       border-color: ${({ theme }) => theme.colors.blue[1]};
 
-      +label {
+        +label {
         color:${({ theme }) => theme.colors.blue[1]};
+          }
+        }
       }
+
+${({ error }) => error && (css`
+  input{
+        transition: all 0.3s ease;
+        border: 1px solid ${({ theme }) => theme.colors.red[1]};
+        display: block;
+        padding: 8px 14px;
+        width: 100%;
+
+        &:focus {
+        outline: none;
+        border-color: ${({ theme }) => theme.colors.red[1]};
+
+          +label {
+          color:${({ theme }) => theme.colors.red[1]};
+            }
+          }
+        }
+    label{
+      color:${({ theme }) => theme.colors.red[1]};
     }
-  }
-}
-  p{
-    margin-bottom: 16px;
-    font-family: 'Ubuntu Mono', sans-serif;
-    font-size: 12px;
-  }
+`)}
 
 `;

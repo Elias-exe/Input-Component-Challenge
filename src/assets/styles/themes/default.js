@@ -8,5 +8,8 @@ export default {
     blue: {
       1: '#2962FF',
     },
+    red: {
+      1: '#D32F2F',
+    },
   },
 };

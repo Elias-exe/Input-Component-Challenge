@@ -13,8 +13,4 @@ export default styled.input`
   color: ${({ theme }) => theme.colors.gray[3]};
   border-radius: 8px;
 
-  &:hover{
-    border-color: red;
-  }
-
 `;
