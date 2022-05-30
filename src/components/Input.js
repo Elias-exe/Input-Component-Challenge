@@ -13,4 +13,12 @@ export default styled.input`
   color: ${({ theme }) => theme.colors.gray[3]};
   border-radius: 8px;
 
+&:disabled{
+  background: #F2F2F2;
+  border: 1px solid #E0E0E0;
+
+  &:hover{
+    border: 1px solid #E0E0E0;
+  }
+}
 `;

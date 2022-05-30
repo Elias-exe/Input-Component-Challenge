@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import { Container, StyledInput } from './styles';
 import Input from '../Input';
 
-export function InputGroup({ title, error }) {
+export function InputGroup({ title, error, disabled }) {
   return (
     <Container>
       <p>{title}</p>
 
       <StyledInput error={error}>
-        <Input placeholder="Placeholder" />
+        <Input disabled={disabled} placeholder="Placeholder" />
         <label>Label</label>
       </StyledInput>
 
@@ -20,9 +20,11 @@ export function InputGroup({ title, error }) {
 InputGroup.propTypes = {
   title: PropTypes.string,
   error: PropTypes.bool,
+  disabled: PropTypes.bool,
 };
 
 InputGroup.defaultProps = {
   title: '',
   error: false,
+  disabled: false,
 };

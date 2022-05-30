@@ -16,6 +16,11 @@ export default function Home() {
         error
       />
 
+      <InputGroup
+        title="<Input disabled />"
+        disabled
+      />
+
     </Container>
   );
 }
