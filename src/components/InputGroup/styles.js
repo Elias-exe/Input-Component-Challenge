@@ -13,6 +13,8 @@ export const Container = styled.div`
 `;
 
 export const InputContainer = styled.div`
+  width: 100%;
+  max-width: 200px;
   display: flex;
   align-items: center;
   justify-items: center;

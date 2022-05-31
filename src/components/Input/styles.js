@@ -44,7 +44,6 @@ ${({ error }) => error && (css`
         border: 1px solid ${({ theme }) => theme.colors.red[1]};
         display: block;
         padding: 8px 14px;
-        width: 100%;
 
         &:focus {
         outline: none;
