@@ -4,6 +4,7 @@ import {
 } from './styles';
 
 export default function Input({
+  label,
   helperText,
   error,
   disabled,
@@ -32,13 +33,14 @@ export default function Input({
         <StyledTextArea placeholder="Placeholder" rows={row} />
       )}
 
-      <label>Label</label>
+      <label>{label}</label>
     </Container>
 
   );
 }
 
 Input.propTypes = {
+  label: PropTypes.string,
   helperText: PropTypes.string,
   error: PropTypes.bool,
   disabled: PropTypes.bool,
@@ -53,6 +55,7 @@ Input.propTypes = {
 };
 
 Input.defaultProps = {
+  label: 'Label',
   helperText: '',
   error: false,
   disabled: false,
