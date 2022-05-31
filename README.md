@@ -90,5 +90,5 @@ $ npm start
 
 ## Contact
 
-- GitHub [@Elias-Exe](https://{github.com/Elias-Exe})
+- GitHub [@Elias-Exe](https://github.com/Elias-Exe)
 - LinkedIn [@Gabriel Elias Machado](https://www.linkedin.com/in/gabriel-elias-machado-a7a088204/)
