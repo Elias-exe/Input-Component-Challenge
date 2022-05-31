@@ -1,30 +1,26 @@
 import PropTypes from 'prop-types';
 
-import { Container, StyledInput } from './styles';
-import Input from '../Input';
+import { Container, InputContainer } from './styles';
 
-export function InputGroup({ title, error, disabled }) {
+export function InputGroup({
+  title, children,
+}) {
   return (
     <Container>
       <p>{title}</p>
 
-      <StyledInput error={error}>
-        <Input disabled={disabled} placeholder="Placeholder" />
-        <label>Label</label>
-      </StyledInput>
-
+      <InputContainer>
+        {children}
+      </InputContainer>
     </Container>
   );
 }
 
 InputGroup.propTypes = {
   title: PropTypes.string,
-  error: PropTypes.bool,
-  disabled: PropTypes.bool,
+  children: PropTypes.node.isRequired,
 };
 
 InputGroup.defaultProps = {
-  title: '',
-  error: false,
-  disabled: false,
+  title: null,
 };

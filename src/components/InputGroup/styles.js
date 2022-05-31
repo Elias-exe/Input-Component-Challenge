@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -12,57 +12,10 @@ export const Container = styled.div`
   }
 `;
 
-export const StyledInput = styled.div`
-    display: flex;
-    flex-direction: column-reverse;
-
-    label {
-      transition: all 0.3s ease;
-      display: inline-block;
-      margin-bottom: 4px;
-    }
-
-    input:hover{
-      border-color: ${({ theme }) => theme.colors.gray[1]};
-    }
-
-    input{
-      transition: all 0.3s ease;
-      border: 1px solid ${({ theme }) => theme.colors.gray[3]};
-      display: block;
-      padding: 8px 14px;
-      width: 100%;
-
-      &:focus {
-      outline: none;
-      border-color: ${({ theme }) => theme.colors.blue[1]};
-
-        +label {
-        color:${({ theme }) => theme.colors.blue[1]};
-          }
-        }
-      }
-
-${({ error }) => error && (css`
-  input{
-        transition: all 0.3s ease;
-        border: 1px solid ${({ theme }) => theme.colors.red[1]};
-        display: block;
-        padding: 8px 14px;
-        width: 100%;
-
-        &:focus {
-        outline: none;
-        border-color: ${({ theme }) => theme.colors.red[1]};
-
-          +label {
-          color:${({ theme }) => theme.colors.red[1]};
-            }
-          }
-        }
-    label{
-      color:${({ theme }) => theme.colors.red[1]};
-    }
-`)}
-
+export const InputContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  margin-right: 156px;
+  gap: 156px;
 `;
